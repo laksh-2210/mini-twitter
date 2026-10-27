@@ -1,0 +1,93 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Twitter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Mini Twitter</h1>
+    <p>Share your thoughts with the world!</p>
+</header>
+
+<div class="container">
+
+    <!-- LOGIN / REGISTER -->
+    <section id="authSection" class="card">
+        <h2 id="authTitle">Create Account</h2>
+
+        <form id="authForm">
+            <div id="nameField">
+                <input id="nameInput" placeholder="Your name" required>
+            </div>
+
+            <input id="usernameInput" placeholder="Username" required>
+            <input id="passwordInput" type="password"
+                   placeholder="Password" required>
+
+            <button id="authButton" type="submit">Register</button>
+        </form>
+
+        <p id="message"></p>
+
+        <p id="switchText">
+            Already have an account?
+            <a href="#" id="switchLink">Login</a>
+        </p>
+    </section>
+
+    <!-- MAIN APP -->
+    <section id="appSection" class="hidden">
+
+        <div class="card">
+            <div class="row">
+                <div>
+                    <div class="profile-name" id="profileName"></div>
+                    <div class="muted" id="profileUsername"></div>
+                </div>
+                <button class="danger" id="logoutButton">Logout</button>
+            </div>
+
+            <div class="stats">
+                <div><strong id="postCount">0</strong> Posts</div>
+                <div><strong id="followerCount">0</strong> Followers</div>
+                <div><strong id="followingCount">0</strong> Following</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Create a Post</h3>
+            <form id="postForm">
+                <textarea id="postInput"
+                    placeholder="What's happening?"
+                    required maxlength="500"></textarea>
+                <button type="submit">Post</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Find People</h3>
+            <input id="searchInput"
+                   placeholder="Search username or name...">
+            <div id="peopleList"></div>
+        </div>
+
+        <div class="card">
+            <h3>Your Feed</h3>
+            <p class="muted">
+                Your posts and posts from people you follow.
+            </p>
+            <div id="feed"></div>
+        </div>
+
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+```
